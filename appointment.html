@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FamCare</title>
+    <link rel="stylesheet" href="styles/appointment.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="left-div">
+          <img src="img/logo.png" alt="FamCare-logo" class="logo" />
+          <h4>FamCare</h4>
+        </div>
+        <div class="right-div">
+          <a href="">Services</a>
+          <a href="">Schedules </a>
+          <a href="">Contact</a>
+          <a href="index.html"><button>Back to Home</button></a>
+        </div>
+      </div>
+    </header>
+    <div class="body-div">
+      <div class="container popup-1">
+        <div class="upper-info"><p>Please choose appointment type</p></div>
+        <div class="lower-info">
+          <button onclick="showPopup('medical-checkup')">Medical Checkup</button>
+          <button onclick="showPopup('laboratory-test')">Laboratory Test</button>
+          <button onclick="showPopup('vaccination')">Vaccination</button>
+          <button onclick="showPopup('ultrasound')">Ultrasound</button>
+          <button>Consultation</button>
+        </div>
+      </div>
+    
+      <div class="container medical-checkup">
+        <div class="upper-info"><p>Medical Checkup</p><img src="img/back.png" alt="" onclick="returnToPrevious()"></div>
+        <div class="lower-info">
+          <button>Add More Options +</button>
+          <button>Option 1</button>
+          <button>Option 2 </button>
+        </div>
+      </div>
+    
+      <div class="container laboratory-test">
+        <div class="upper-info"><p>Laboratory Test</p><img src="img/back.png" alt="" onclick="returnToPrevious()"></div>
+        <div class="lower-info">
+
+          <button>Add More Options +</button>
+          <button>Option 1</button>
+          <button>Option 2 </button>
+        </div>
+      </div>
+      <div class="container vaccination">
+        <div class="upper-info"><p>Vaccination</p><img src="img/back.png" alt="" onclick="returnToPrevious()"></div>
+        <div class="lower-info">
+          <button>Add More Options +</button>
+          <button>Option 1</button>
+          <button>Option 2 </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let navigationHistory = []; 
+    function showPopup(popupClass) {
+      // Hide all popups first
+      const allPopups = document.querySelectorAll('.container');
+      allPopups.forEach(popup => {
+        popup.style.display = 'none';
+      });
+  
+      // Show the selected popup
+      const popupToShow = document.querySelector(`.${popupClass}`);
+      popupToShow.style.display = 'flex';
+  
+      // Add to history if it's not the initial load
+      if (navigationHistory[navigationHistory.length - 1] !== popupClass) {
+        navigationHistory.push(popupClass);
+      }
+    }
+  
+    // Function to return to the previous popup in the history
+    function returnToPrevious() {
+      // Remove the current popup from the history
+      navigationHistory.pop();
+  
+      // Get the previous popup in the history
+      const previousPopup = navigationHistory[navigationHistory.length - 1] || 'popup-1';
+  
+      // Show the previous popup
+      showPopup(previousPopup);
+    }
+  
+    // Initial load: Show only popup-1 and add it to the history
+    document.addEventListener('DOMContentLoaded', () => {
+      showPopup('popup-1'); // Load popup-1 by default
+    });
+  </script>
+  
+  
+</html>

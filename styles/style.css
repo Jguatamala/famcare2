@@ -1,0 +1,453 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+body::after {
+    width: 400px; /* Set the size of the second circle */
+    height: 400px; /* Set the size of the second circle */
+    top: 40%; /* Position it somewhere near the center */
+    right: 10%; /* Position it somewhere near the right */
+}
+
+
+
+header {
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    height: 85px;
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+    font-weight: bold;
+    margin-right: 37px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.left-div {
+    display: flex;
+    align-items: center;
+    color: orangered;
+    font-weight: bold;
+    font-size: 23px;
+    margin-left: 2%;
+}
+.right-div{
+    margin-right: 1%;
+    font-size: 23px;
+}
+.logo {
+    width: 65px;
+    height: auto;
+    margin-right: -7px;
+}
+
+header a button {
+    background: linear-gradient(to right, rgb(247, 0, 193), blue); 
+    border: none; 
+    color: white; 
+    padding: 10px 20px; 
+    font-size: 23px; 
+    font-weight: bold; 
+    border-radius: 23px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+}
+header a button:hover {
+    background-position: left center; 
+    background: linear-gradient(to right, #FF4500, #FF6347); 
+}
+
+.content-div {
+    width: 100%;
+    background: linear-gradient(to top, rgba(255, 0, 72, 0.9), rgba(0, 102, 255, 0.9)), url(../img/bg.jpg); /* Adjust alpha (0.5 for transparency) */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50% 35%;
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+}
+.content-header{
+    padding-top: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+}
+.upper-part{
+    padding-top: 10px;
+    flex: 0 0 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.upper-part-header{
+    font-size: 65px;
+    margin-bottom: -19px;
+}
+.lower-part-header{
+    text-decoration: underline;
+    font-size: 25px;
+}
+
+.lower-part{
+    flex: 1;
+}
+
+
+
+
+
+
+
+.lower-part {
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.doctor-info {
+    text-align: center;
+    margin-top: 0;
+}
+
+.doctor-title {
+    margin-top: 0;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.doctor-name {
+    margin-top: 7px;
+    font-size: 26px;
+    color: #FFCC00;
+    margin-bottom: 10px;
+}
+.doctor-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-ring {
+    border: 3px solid white;  /* White ring around the profile */
+    border-radius: 50%;  /* Makes it circular */
+    width: 193px;  /* Fixed size for the ring */
+    height: 193px;  /* Fixed size for the ring */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;  /* Make the background transparent */
+    padding: 1px;  /* Adds some space inside the ring */
+ /* Ensures that anything outside the circle is clipped */
+}
+
+.profile-image {
+    width: 100%;  /* Make the image fill the container */
+    height: 100%;  /* Make the image fill the container */
+    object-fit: cover;  /* Ensures the image covers the entire ring without stretching */
+    border-radius: 50%;  /* Makes the image round */
+}
+
+
+
+.hours {
+    display: flex;
+    justify-content: center;
+    width: 78%;
+    padding-bottom: 14px;
+}
+.time-box {
+    margin-right: 30px; 
+}
+
+.time-box:last-child {
+    margin-right: 0; 
+}
+
+.time-box {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 7px 10px;
+    font-size: 21px;
+    border-radius: 25px;
+    text-align: center;
+    width: 19%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.foot{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    height: 900px;
+}
+.foot .card{
+
+    background-color: rgb(240, 240, 240);
+    width: 240px;
+    border-radius: 12px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.foot .card:nth-child(1){
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card{
+    color: rgba(0, 38, 255, 0.829);
+    font-family: 'Arial Black', Arial, Helvetica, sans-serif;
+    padding-bottom: auto;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+    background-color: #f1f1f1;  /* Change background color on hover */
+    transform: scale(1.05);  /* Enlarge the card to 105% of its original size */
+}
+
+.card-content-title{
+    margin-top: 0;
+    font-family: 'Arial Black', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgba(0, 38, 255, 0.829);
+    margin-bottom: 0;
+}
+.card-content-title2{
+    margin-top: 10;
+    font-family: 'Arial Black', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgba(0, 38, 255, 0.829);
+    margin-bottom: 0;
+}
+
+.wahaha{
+    height: 105px;
+    width: 105px;
+}
+.wahahae{
+    height: 85px;
+    width: 85px;
+}
+.open-close{
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    background-color: #27ca02;
+    width: 50%;
+    height: 10%;
+    border-radius: 10px;
+    color: white;
+}
+.open-close-button {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    background: linear-gradient(to right, rgb(247, 0, 193), blue);
+    width: 70%;
+    height: 10%;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;  /* Remove the default underline on anchor */
+    display: block;  /* Makes the anchor tag behave like a block-level element */
+}
+
+.card a button{
+    background: linear-gradient(to right, rgb(247, 0, 193), blue); 
+    border: none; 
+    color: white; 
+    padding: 7px 20px;
+    font-size: 17px; 
+    font-weight: bold; 
+    border-radius: 20px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    margin-bottom: auto;
+    width: 200px;
+}
+.card h5{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* THIS IS FOR THE POPUP */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+/* Pop-up Styling */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 350px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: none;
+    z-index: 1001;
+    opacity: 0;  /* Start with opacity 0 */
+    animation: popIn 0.5s forwards; 
+}
+
+.popup-content h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #222121;
+}
+.popup-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content input {
+    border: none;
+    border-radius: 5px;
+    background-color: #591250;
+    width: 390px;    
+    height: 33px;   
+    margin-bottom: 10px; 
+}
+
+.popup-content h5{
+    margin-top: 10px;
+    color: #393737;
+    font-size: 14px;
+}
+form input, ::placeholder{
+    text-align: center;
+    color: white;
+}
+.popup-content form .submit{
+    width: 395px;    
+    height: 33px;  
+    color: white;
+    background-color: green;
+    font-weight: bold;
+}
+.popup-content input[type="submit"] {
+    cursor: pointer; /* Add this for better UX (clickable effect) */
+}
+
+.popup-content p {
+    font-weight: bold;
+    color: #666;
+    margin-top: 10px;
+}
+
+.dismiss-btn {
+    background-color: #44d90e;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 390px;
+}
+
+.dismiss-btn:hover {
+    background-color: #540149;
+}
+
+/* Close Button (X) */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-btn:hover {
+    color: #74026a;
+}
+@keyframes popIn {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5); /* Start small */
+        opacity: 0;  /* Start invisible */
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1); /* Slightly bigger */
+        opacity: 0.8; /* Fading in */
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1); /* Final size */
+        opacity: 1;  /* Fully visible */
+    }
+}
+/* Reverse animation for exiting the popup */
+.popup.hide {
+    opacity: 0;
+    animation: popOut 0.5s forwards;  /* Reverse animation when hiding */
+}
+
+@keyframes popOut {
+    0% {
+        transform: translate(-50%, -50%) scale(1);  /* Start at full size */
+        opacity: 1;  /* Fully visible */
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1); /* Slightly bigger */
+        opacity: 0.8; /* Still fading out */
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.5); /* Shrink */
+        opacity: 0;  /* Fully transparent */
+    }
+}
+

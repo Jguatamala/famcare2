@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    background: linear-gradient(to top, rgba(255, 0, 72, 0.9), rgba(0, 102, 255, 0.9)), url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    height: 100vh;
+}
+
+
+header {
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    height: 85px;
+    position: sticky; 
+    top: 0; 
+
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+    font-weight: bold;
+    margin-right: 37px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.left-div {
+    display: flex;
+    align-items: center;
+    color: orangered;
+    font-weight: bold;
+    font-size: 23px;
+    margin-left: 2%;
+}
+.right-div{
+    margin-right: 1%;
+    font-size: 23px;
+}
+.logo {
+    width: 65px;
+    height: auto;
+    margin-right: -7px;
+}
+
+header a button {
+    background: linear-gradient(to right, rgb(247, 0, 193), blue); 
+    border: none; 
+    color: white; 
+    padding: 10px 20px; 
+    font-size: 23px; 
+    font-weight: bold; 
+    border-radius: 23px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+}
+
+/* THIS IS FOR THE BODY */
+.body-div{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    height: 90vh;
+}
+.container {
+  display: none;
+  animation: popIn 0.5s ease-out forwards;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 40%;
+    margin-bottom: 10px;
+    display: none; /* Hide all containers initially */
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  .popup-1, .medical-checkup, .laboratory-test, .vaccination{
+
+    background-color: rgb(242, 242, 242);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .popup-1, .medical-checkup, .laboratory-test, .vaccination p{
+    color: rgb(109, 109, 109);
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .upper-info{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 43%;
+    width: 100%;
+    height: 10%;
+  }
+  .upper-info img{
+    height: 50px;
+    width: auto;
+  }
+  .upper-info img:hover{
+    transform: scale(1.1);
+  }
+  .lower-info{
+    margin-top: 0;
+    padding: 30px 17px;
+    background-color: rgb(220, 242, 255);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 90%;
+  }
+  .lower-info button{
+    margin: 10px 20px;
+    font-size: 25px;
+    color: white;
+    margin-top: 0;
+    width: 290px;
+    height: 70px;
+    border: none;
+    background-color: rgb(43, 67, 249);
+    border-radius: 50px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  .lower-info button:hover {
+    background-color: rgb(184, 63, 211);
+    transform: scale(1.1); /* Increase size by 10% */
+  }
+  .container button {
+    cursor: pointer;
+  }
+  
+  /* Initially show the first container only */
+  .container:first-of-type {
+    display: block;
+  }
+  
+  @keyframes popIn {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }

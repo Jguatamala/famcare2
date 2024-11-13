@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FamCare</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/popup.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="left-div">
+          <img src="img/logo.png" alt="FamCare-logo" class="logo" />
+          <h4>FamCare</h4>
+        </div>
+        <div class="right-div">
+          <a href="">Services</a>
+          <a href="">Schedules </a>
+          <a href="">Contact</a>
+          <a href="javascript:void(0);" onclick="showPopup()"><button>Schedule Appointment</button></a>
+        </div>
+      </div>
+    </header>
+    <div class="body-div">
+      <div class="content-div">
+        <div class="content-header">
+          <div class="upper-part">
+            <span class="upper-part-header"
+              >FAMCare Medical Clinic and Laboratory</span
+            >
+            <br /><span class="lower-part-header"
+              >OFFICE 6&7 MEZZAINE, DAUIN MEGA MARKET, NEGROS ORIENTAL</span
+            >
+          </div>
+          <div class="lower-part">
+            <div class="doctor-info">
+              <p class="doctor-title">Doctor on duty today:</p>
+              <div class="doctor-profile">
+                <div class="profile-ring">
+                  <img
+                    src="img/doctor.png"
+                    alt="Doctor Profile"
+                    class="profile-image"
+                  />
+                </div>
+              </div>
+              <p class="doctor-name">Dr. Benjamin Netanyaju</p>
+            </div>
+            <div class="hours">
+              <div class="time-box">8:00 am - 11:59 am</div>
+              <div class="time-box">12:00 pm - 4:00 pm</div>
+            </div>
+            <div class="foot">
+
+              <div class="card">
+                <div class="card-logo">
+                  <img src="img/clock.png" alt="" class="wahaha" />
+                </div>
+                <h3 class="card-content-title">CLINICAL HOURS</h3>
+                <div class="open-close">OPEN</div>
+                <h5>Daily Schedule</h5>
+                <h5>8:30 am - 4:00 pm</h5>
+                <h5 style="margin-bottom: 17px">Noon break @ 12 nn</h5>
+                <a href=""><button>LEARN MORE</button></a>
+              </div>
+
+              <div class="card">
+                <div class="card-logo">
+                  <img src="img/nxt-doc.png" alt="" class="wahahae" />
+                </div>
+                <h3 class="card-content-title2">Dr. Girly Bantayanon</h3>
+                <h5>Clinical Schedule</h5>
+                <h5>Sept - Nov of 2024</h5>
+                <h5>Mon - Fri 9:30 am - 12 nn</h5>
+                <h5>SATURDAY 9am - 12 nn ONLY</h5>
+                <br>
+                <a href=""><button>VIEW</button></a>
+              </div>
+
+              <div class="card">
+                <div class="card-logo">
+                  <img src="img/lab.png" alt="" class="wahahae" />
+                </div>
+                <h3 class="card-content-title2">LABORATORY</h3>
+                <h5>Laboratory Schedule</h5>
+                <h5>Monday - Saturday</h5>
+                <h5>7:00 am - 4:00 pm</h5>
+                <h5>SAMPLE CUT-OFF @ 3 PM</h5>
+                <br>
+                <a href=""><button>SCHEDULE NOW</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay" id="overlay" onclick="hidePopup()"></div>
+    <div class="popup" id="popup">
+        <button class="close-btn" onclick="hidePopup()">X</button>
+        <div class="popup-content">
+            <h3>Schedule an Appointment</h3>
+            <p>To continue please login to your account. Thank you very much</p>
+            <form action="">
+              <input type="email" name="email" id="email" placeholder="Email">
+              <input type="password" name="password" id="password" placeholder="Password">
+              <input type="submit" value="LOGIN" class="submit" onclick="loginbutton(event)">
+            </form>
+            <h5>Not yet registered?<a href=""> Sign Up</a></h5>
+        </div>
+    </div>
+  </body>
+</html>
